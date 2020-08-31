@@ -1,4 +1,8 @@
-nz-alert {
-    margin-bottom: 16px;
+[nz-button] {
+    margin-right: 8px;
+    margin-bottom: 12px;
   }
-  
+
+  button {
+    margin-right: 8px;
+  }

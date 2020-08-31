@@ -1,16 +1,56 @@
 <p>preguntas-seguridad2 works!</p>
-<nz-alert
-nzType="warning"
-nzCloseable
-nzMessage="Warning Text Warning Text Warning Text Warning Text Warning Text Warning Text Warning Text"
-(nzOnClose)="afterClose()"
->
-</nz-alert>
-<nz-alert
-nzType="error"
-nzCloseable
-nzMessage="Error Text"
-nzDescription="Error Description Error Description Error Description Error Description Error Description Error Description"
-(nzOnClose)="afterClose()"
->
-</nz-alert>
+
+<button nz-button nzType="primary" (click)="info()">Primary</button>
+<button nz-button nzType="default"(click)="error()">Default</button>
+<button nz-button nzType="dashed" (click)="success()">Dashed</button>
+<button nz-button (click)="error()">Error</button>
+<button nz-button (click)="warning()">Warning</button>
+
+<button nz-button [nzType]="'primary'" (click)="showModal()"><span>Ver documentos</span><i nz-icon nzType="down" nzTheme="outline"></i></button>
+<nz-modal [(nzVisible)]="isVisible" nzTitle="Preguntas de Seguridad" (nzOnCancel)="handleCancel()" (nzOnOk)="handleOk()">
+    <h5>¿Cual es tu fecha de nacimiento?</h5>
+    <form nz-form>
+      <nz-form-item>
+        <nz-form-control [nzSpan]="14">
+          <input nz-input name="date" type="date" id="date">
+          <button nz-button nzType="validar">Validar</button>
+        </nz-form-control>
+      </nz-form-item >
+    </form>
+    <h5>¿Cual es tu forma de pago?</h5>
+    <form nz-form>
+     <nz-form-item>
+       <nz-form-control [nzSpan]="14">
+         <input nz-input name="pago" type="pago" id="pago">
+         <button nz-button nzType="validar">Validar</button>
+       </nz-form-control>
+     </nz-form-item >
+   </form>
+   <h5>¿Cual es su importe total a pagar?</h5>
+   <form nz-form>
+     <nz-form-item>
+       <nz-form-control [nzSpan]="14">
+         <input nz-input name="importe" type="importe" id="importe">
+         <button nz-button nzType="validar">Validar</button>
+       </nz-form-control>
+     </nz-form-item >
+   </form>
+   <h5>¿Cual es su RFC?</h5>
+   <form nz-form>
+     <nz-form-item>
+       <nz-form-control [nzSpan]="14">
+         <input nz-input name="RFC" type="RFC" id="RFC">
+         <button nz-button nzType="validar">Validar</button>
+       </nz-form-control>
+     </nz-form-item >
+   </form>
+   <h5>¿Cual es su estado civil?</h5>
+   <form nz-form>
+     <nz-form-item>
+       <nz-form-control [nzSpan]="14">
+         <input nz-input name="status" type="status" id="status">
+         <button nz-button nzType="validar">Validar</button>
+       </nz-form-control>
+     </nz-form-item >
+   </form>
+</nz-modal>

@@ -8,6 +8,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { PreguntasSeguridad2Component } from './preguntas-seguridad2/preguntas-seguridad2.component';
 
 import {DemoNgZorroAntdModule} from './ng-zorro-antd.module';
+import { NzButtonModule } from 'ng-zorro-antd/button';
 
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
@@ -39,7 +40,8 @@ const rutas: Routes = [
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    DemoNgZorroAntdModule
+    DemoNgZorroAntdModule,
+    NzButtonModule
   ],
   providers: [{ provide: NZ_I18N, useValue: es_ES }],
   bootstrap: [AppComponent]
