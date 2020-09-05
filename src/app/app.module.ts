@@ -18,6 +18,9 @@ import { es_ES } from 'ng-zorro-antd/i18n';
 import { registerLocaleData } from '@angular/common';
 import es from '@angular/common/locales/es';
 
+//firebase
+/* import {AngularFireDatabaseModule } from 'angularfire2/database'; */
+
 registerLocaleData(es);
 
 const rutas: Routes = [
@@ -41,7 +44,8 @@ const rutas: Routes = [
     HttpClientModule,
     BrowserAnimationsModule,
     DemoNgZorroAntdModule,
-    NzButtonModule
+    NzButtonModule,
+    /* AngularFireDatabaseModule */
   ],
   providers: [{ provide: NZ_I18N, useValue: es_ES }],
   bootstrap: [AppComponent]
